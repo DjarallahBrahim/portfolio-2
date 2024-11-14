@@ -8,7 +8,7 @@ import Projects from './components/Projects';
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
       <Header />
       <main>
         <Bio />

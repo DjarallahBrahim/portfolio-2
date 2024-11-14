@@ -55,7 +55,7 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="py-20 bg-background">
+    <section id="certifications" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text">
           Certifications & Badges
