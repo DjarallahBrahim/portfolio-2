@@ -14,7 +14,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-foreground/10">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-foreground/10">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="text-2xl font-bold text-primary-400">Portfolio</a>
