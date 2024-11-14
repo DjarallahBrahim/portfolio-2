@@ -1,86 +1,75 @@
 import React from 'react';
-import { Code2, Globe, Database, Cloud, BarChart } from 'lucide-react';
+import {
+  FaCode,
+  FaServer,
+  FaDatabase,
+  FaCloud,
+  FaChartLine,
+} from 'react-icons/fa';
 
-const SkillCategory = ({
-  title,
-  icon: Icon,
-  skills,
-}: {
-  title: string;
-  icon: any;
-  skills: string[];
-}) => (
-  <div className="p-6 bg-card rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-    <div className="flex items-center gap-3 mb-4">
-      <Icon className="w-6 h-6 text-primary-400" />
-      <h3 className="text-xl font-semibold text-card-foreground">{title}</h3>
-    </div>
-    <div className="flex flex-wrap gap-2">
-      {skills.map((skill) => (
-        <span
-          key={skill}
-          className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm"
-        >
-          {skill}
-        </span>
-      ))}
-    </div>
-  </div>
-);
+const skillCategories: Record<
+  | 'Frontend'
+  | 'Backend'
+  | 'Database'
+  | 'Cloud & DevOps'
+  | 'Monitoring & Analytics',
+  string[]
+> = {
+  Frontend: ['Javascript', 'TypeScript', 'React'],
+  Backend: ['Java', 'Spring boot', 'Kafka', 'Node.js'],
+  Database: ['postgresql', 'mysql', 'ElasticSearch'],
+  'Cloud & DevOps': [
+    'Openshift',
+    'docker',
+    'kubernetes',
+    'Helm',
+    'Terraform',
+    'Ansible',
+    'CI/CD',
+  ],
+  'Monitoring & Analytics': ['Grafana', 'Prometheus', 'Kibana'],
+};
+
+const categoryIcons: Record<
+  | 'Frontend'
+  | 'Backend'
+  | 'Database'
+  | 'Cloud & DevOps'
+  | 'Monitoring & Analytics',
+  JSX.Element
+> = {
+  Frontend: <FaCode className="text-primary-400" />,
+  Backend: <FaServer className="text-primary-400" />,
+  Database: <FaDatabase className="text-primary-400" />,
+  'Cloud & DevOps': <FaCloud className="text-primary-400" />,
+  'Monitoring & Analytics': <FaChartLine className="text-primary-400" />,
+};
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: 'Frontend',
-      icon: Globe,
-      skills: ['Javascript', 'TypeScript', 'React', 'Vue.js'],
-    },
-    {
-      title: 'Backend',
-      icon: Code2,
-      skills: ['Java', 'Spring boot', 'Hibernete', 'Kafka', 'Node.js'],
-    },
-    {
-      title: 'Database',
-      icon: Database,
-      skills: ['PostgreSQL', 'MySql', 'MongoDB', 'ElasticSearch'],
-    },
-    {
-      title: 'Cloud & DevOps',
-      icon: Cloud,
-      skills: [
-        'Openshift',
-        'Docker',
-        'Kubernetes',
-        'CI/CD',
-        'Helm',
-        'Terraform',
-        'Ansible',
-        'GCP',
-      ],
-    },
-    {
-      title: 'Monitoring & Analytics',
-      icon: BarChart,
-      skills: ['Grafana', 'Prometheus', 'Kibana'],
-    },
-  ];
-
   return (
-    <section id="skills" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4 font-semibold bg-clip-text">
-          Skills & Technologies
-        </h2>
-        <p className="text-foreground/70 text-center mb-12 max-w-2xl mx-auto">
-          A comprehensive overview of my technical expertise and the tools I
-          work with
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillCategories.map((category) => (
-            <SkillCategory key={category.title} {...category} />
-          ))}
-        </div>
+    <section className="p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+      <h2 className="text-2xl font-semibold text-center text-card-foreground mb-8">
+        Skills
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+        {Object.entries(skillCategories).map(([category, skills]) => (
+          <div key={category}>
+            <div className="flex items-center gap-2 mb-4">
+              {/* TypeScript will recognize `category` as one of the exact keys */}
+              {categoryIcons[category as keyof typeof categoryIcons]}
+              <h3 className="text-xl font-semibold text-card-foreground">
+                {category}
+              </h3>
+            </div>
+            <div className="flex flex-col gap-2">
+              {skills.map((skill) => (
+                <p key={skill} className="text-white text-sm">
+                  {skill}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
