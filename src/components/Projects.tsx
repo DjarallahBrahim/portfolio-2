@@ -24,16 +24,16 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20">
-      <div className="container mx-auto px-4 ml-20 mr-20">
+      <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-600 to-primary-400 text-transparent bg-clip-text">
-          Projets Personel
+          Projets Personnels
         </h2>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           A showcase of my personal projects and contributions to the developer
           community
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -47,7 +47,7 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-semibold text-card-foreground">
                     {project.title}
@@ -61,14 +61,14 @@ const Projects = () => {
                     <Github className="w-5 h-5" />
                   </a>
                 </div>
-                <p className="text-card-foreground/80 mb-6">
+                <p className="text-card-foreground/80 mb-6 text-sm sm:text-base">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm"
+                      className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs sm:text-sm"
                     >
                       {tech}
                     </span>
