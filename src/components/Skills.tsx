@@ -47,23 +47,23 @@ const categoryIcons: Record<
 
 const Skills = () => {
   return (
-    <section className="p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-      <h2 className="text-2xl font-semibold text-center text-card-foreground mb-8">
-        Skills
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+    <section
+      className="p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+    >
+      <h2 className="text-2xl font-semibold text-center text-card-foreground mb-8">Skills</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {Object.entries(skillCategories).map(([category, skills]) => (
-          <div key={category}>
+          <div key={category} className="flex flex-col items-center">
             <div className="flex items-center gap-2 mb-4">
-              {/* TypeScript will recognize `category` as one of the exact keys */}
               {categoryIcons[category as keyof typeof categoryIcons]}
-              <h3 className="text-xl font-semibold text-card-foreground">
-                {category}
-              </h3>
+              <h3 className="text-xl font-semibold text-card-foreground">{category}</h3>
             </div>
             <div className="flex flex-col gap-2">
-              {skills.map((skill) => (
-                <p key={skill} className="text-white text-sm">
+              {skills.map(skill => (
+                <p
+                  key={skill}
+                  className="text-white text-sm"
+                >
                   {skill}
                 </p>
               ))}
