@@ -51,7 +51,7 @@ const Skills = () => {
       className="p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
     >
       <h2 className="text-4xl font-semibold text-center text-card-foreground mb-8">Skills</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
         {Object.entries(skillCategories).map(([category, skills]) => (
           <div key={category} className="flex flex-col items-center">
             <div className="flex items-center gap-2 mb-4">
@@ -62,7 +62,7 @@ const Skills = () => {
               {skills.map(skill => (
                 <p
                   key={skill}
-                  className="text-white text-sm"
+                  className="text-white text-l"
                 >
                   {skill}
                 </p>
