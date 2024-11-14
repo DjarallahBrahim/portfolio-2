@@ -50,7 +50,7 @@ const Skills = () => {
     <section
       className="p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
     >
-      <h2 className="text-2xl font-semibold text-center text-card-foreground mb-8">Skills</h2>
+      <h2 className="text-4xl font-semibold text-center text-card-foreground mb-8">Skills</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {Object.entries(skillCategories).map(([category, skills]) => (
           <div key={category} className="flex flex-col items-center">

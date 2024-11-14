@@ -105,7 +105,7 @@ const Experience = () => {
     <section id="experience" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4 font-semibold bg-clip-text">
-          Professional Experience
+        Expériences professionnelles
         </h2>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           My journey in the tech industry and the impactful projects I've worked
