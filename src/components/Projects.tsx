@@ -16,8 +16,8 @@ const Projects = () => {
         'Github Action',
         'Kubernetes',
       ],
-      github: 'https://github.com/DjarallahBrahim?tab=repositories',
-      demo: 'https://github.com/DjarallahBrahim?tab=repositories',
+      github: 'https://github.com/DjarallahBrahim?tab=repositories&q=jobOffer&type=&language=&sort=',
+      demo: 'https://github.com/DjarallahBrahim?tab=repositories&q=jobOffer&type=&language=&sort=',
       image: './JobStream.png',
     },
   ];
