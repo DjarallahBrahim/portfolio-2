@@ -16,9 +16,7 @@ const skillCategories: Record<
   | 'Monitoring & Analytics',
   string[]
 > = {
-  Frontend: ['Javascript', 'TypeScript', 'React'],
   Backend: ['Java', 'Spring boot', 'Kafka', 'Node.js'],
-  Database: ['postgresql', 'mysql', 'ElasticSearch'],
   'Cloud & DevOps': [
     'Openshift',
     'docker',
@@ -28,6 +26,8 @@ const skillCategories: Record<
     'Ansible',
     'CI/CD',
   ],
+  Frontend: ['Javascript', 'TypeScript', 'React'],
+  Database: ['postgresql', 'mysql', 'ElasticSearch'],
   'Monitoring & Analytics': ['Grafana', 'Prometheus', 'Kibana'],
 };
 
