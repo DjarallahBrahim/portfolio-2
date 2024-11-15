@@ -34,7 +34,7 @@ const categoryIcons = {
 const Skills = () => {
   return (
     <section className="py-0">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 fade-in">
         <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">
           Skills & Technologies
         </h2>
