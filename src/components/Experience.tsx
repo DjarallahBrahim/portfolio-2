@@ -102,8 +102,8 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="experience" className="py-10">
+      <div className="container mx-auto px-4 shadow-lg hover:shadow-xl transition-shadow">
         <h2 className="text-4xl font-bold text-center mb-4 font-semibold bg-clip-text bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text fade-in">
         Expériences professionnelles
         </h2>
@@ -112,7 +112,7 @@ const Experience = () => {
           on
         </p>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto pb-5">
           {experiences.map((exp, index) => (
             <div key={index} className="relative pl-8 pb-12 last:pb-0 fade-in">
               {/* Timeline line */}
