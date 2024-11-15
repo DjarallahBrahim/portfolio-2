@@ -6,11 +6,11 @@ const Bio = () => {
     <section id="bio" className="py-32 flex items-center justify-center">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
-          <div className="relative">
+          <div className="relative fade-in">
             <img
             src="./profile-pic.png"
             alt="Profile"
-            className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-primary-200 flex-shrink-0 fade-in"
+            className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-primary-200 flex-shrink-0"
           />
           <span className="absolute bottom-5 right-5 text-4xl">👋</span>
           </div>
