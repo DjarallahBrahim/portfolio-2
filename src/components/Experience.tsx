@@ -104,10 +104,10 @@ const Experience = () => {
   return (
     <section id="experience" className="py-10">
       <div className="container mx-auto px-4 shadow-lg hover:shadow-xl transition-shadow">
-        <h2 className="text-4xl font-bold text-center mb-4 font-semibold bg-clip-text bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text fade-in">
+        <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1 fade-in">
         Expériences professionnelles
         </h2>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto fade-in">
+        <p className="text-gray-200 text-center mb-12 max-w-2xl mx-auto fade-in">
         Mon parcours dans l'IT et les projets innovants auxquels j'ai contribué ✨
         </p>
 

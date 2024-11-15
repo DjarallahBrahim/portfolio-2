@@ -5,85 +5,74 @@ import {
   FaDatabase,
   FaCloud,
   FaChartLine,
-  FaCheckCircle,
 } from 'react-icons/fa';
 
-const skillCategories: Record<
-  | 'Frontend'
-  | 'Backend'
-  | 'Database'
-  | 'Cloud & DevOps'
-  | 'Monitoring & Analytics',
-  string[]
-> = {
+const skillCategories = {
   Backend: ['Java', 'Spring boot', 'Kafka', 'Node.js'],
   'Cloud & DevOps': [
     'Openshift',
-    'docker',
-    'kubernetes',
+    'Docker',
+    'Kubernetes',
     'Helm',
     'Terraform',
     'Ansible',
     'CI/CD',
   ],
   Frontend: ['Javascript', 'TypeScript', 'React'],
-  Database: ['postgresql', 'mysql', 'ElasticSearch'],
+  Database: ['PostgreSQL', 'MySQL', 'ElasticSearch'],
   'Monitoring & Analytics': ['Grafana', 'Prometheus', 'Kibana'],
-};
+} as const;
 
-const categoryIcons: Record<
-  | 'Frontend'
-  | 'Backend'
-  | 'Database'
-  | 'Cloud & DevOps'
-  | 'Monitoring & Analytics',
-  JSX.Element
-> = {
-  Frontend: <FaCode className="text-primary-400" />,
-  Backend: <FaServer className="text-primary-400" />,
-  Database: <FaDatabase className="text-primary-400" />,
-  'Cloud & DevOps': <FaCloud className="text-primary-400" />,
-  'Monitoring & Analytics': <FaChartLine className="text-primary-400" />,
-};
-
-// Helper function to split skills into up to 2 columns with max 4 skills per column
-const splitSkillsIntoTwoColumns = (skills: string[]) => {
-  if (skills.length <= 4) {
-    return [skills];
-  }
-  return [skills.slice(0, 4), skills.slice(4)];
-};
+const categoryIcons = {
+  Frontend: <FaCode size={24} />,
+  Backend: <FaServer size={24} />,
+  Database: <FaDatabase size={24} />,
+  'Cloud & DevOps': <FaCloud size={24} />,
+  'Monitoring & Analytics': <FaChartLine size={24} />,
+} as const;
 
 const Skills = () => {
   return (
-    <section className="p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-      <h2 className="text-4xl font-semibold text-center text-card-foreground mb-8 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text fade-in">
-        Skills
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 fade-in">
-        {Object.entries(skillCategories).map(([category, skills]) => {
-          const columns = splitSkillsIntoTwoColumns(skills);
-          return (
-            <div key={category} className="flex flex-col items-center">
-              <div className="flex items-center gap-2 mb-4">
-                {categoryIcons[category as keyof typeof categoryIcons]}
-                <h3 className="text-xl font-semibold text-card-foreground">{category}</h3>
+    <section className="py-0">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">
+          Skills & Technologies
+        </h2>
+        <p className="text-foreground/70 text-center mb-12 max-w-2xl mx-auto">
+          Technologies et outils que j'utilise au quotidien 🛠️
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {Object.entries(skillCategories).map(([category, skills]) => (
+            <div 
+              key={category} 
+              className="bg-card p-6 rounded-xl border border-primary-400/10 hover:border-primary-400/20 transition-all duration-300 hover:shadow-lg group"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-lg bg-primary-400/10 text-primary-400 group-hover:scale-110 transition-transform duration-300">
+                  {categoryIcons[category as keyof typeof categoryIcons]}
+                </div>
+                <h3 className="text-xl font-semibold text-card-foreground">
+                  {category}
+                </h3>
               </div>
-              <div className="flex gap-8">
-                {columns.map((col, index) => (
-                  <div key={index} className="flex flex-col gap-2">
-                    {col.map(skill => (
-                      <div key={skill} className="flex items-center gap-2">
-                        <span className="mr-3 text-blue-600 text-lg">•</span>
-                        <p className="text-white text-l">{skill}</p>
-                      </div>
-                    ))}
+
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                {skills.map((skill) => (
+                  <div 
+                    key={skill}
+                    className="flex items-center gap-2 group/skill"
+                  >
+                    <div className="h-2 w-2 rounded-full bg-primary-400/50 group-hover/skill:bg-primary-400 transition-colors duration-300" />
+                    <span className="text-foreground/70 group-hover/skill:text-foreground transition-colors duration-300">
+                      {skill}
+                    </span>
                   </div>
                 ))}
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

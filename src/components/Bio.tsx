@@ -29,26 +29,35 @@ const Bio = () => {
                 href="https://github.com/DjarallahBrahim"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-foreground/10 text-foreground rounded-lg hover:bg-foreground/20 transition-colors"
+                className="flex items-center gap-2 px-6 py-2.5 bg-card hover:bg-card/80 text-foreground rounded-full border border-primary-400/20 shadow-lg hover:shadow-primary-400/20 transition-all duration-300 group"
               >
-                <Github size={20} />
-                GitHub
+                <Github 
+                  size={20} 
+                  className="text-primary-400 group-hover:rotate-12 transition-transform duration-300" 
+                />
+                <span className="font-medium">GitHub</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/djarallah-brahim/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-foreground/10 text-foreground rounded-lg hover:bg-foreground/20 transition-colors"
+                className="flex items-center gap-2 px-6 py-2.5 bg-card hover:bg-card/80 text-foreground rounded-full border border-primary-400/20 shadow-lg hover:shadow-primary-400/20 transition-all duration-300 group"
               >
-                <Linkedin size={20} />
-                LinkedIn
+                <Linkedin 
+                  size={20} 
+                  className="text-primary-400 group-hover:rotate-12 transition-transform duration-300" 
+                />
+                <span className="font-medium">LinkedIn</span>
               </a>
               <a
                 href="mailto:djarallah.brahim@gmail.com"
-                className="flex items-center gap-2 px-4 py-2 bg-foreground/10 text-foreground rounded-lg hover:bg-foreground/20 transition-colors"
+                className="flex items-center gap-2 px-6 py-2.5 bg-card hover:bg-card/80 text-foreground rounded-full border border-primary-400/20 shadow-lg hover:shadow-primary-400/20 transition-all duration-300 group"
               >
-                <Mail size={20} />
-                Contact
+                <Mail 
+                  size={20} 
+                  className="text-primary-400 group-hover:rotate-12 transition-transform duration-300" 
+                />
+                <span className="font-medium">Contact</span>
               </a>
             </div>
           </div>

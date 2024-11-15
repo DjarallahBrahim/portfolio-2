@@ -1,7 +1,9 @@
-import React from 'react';
-import { Award } from 'lucide-react';
+import React, { useState } from 'react';
+import { Award, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Certifications = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const certifications = [
     {
       name: 'Certified Kubernetes Application Developer',
@@ -54,45 +56,66 @@ const Certifications = () => {
     },
   ];
 
+  const displayedCertifications = showAll ? certifications : certifications.slice(0, 3);
+
   return (
     <section id="certifications" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text">
+        <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">
           Certifications & Badges
         </h2>
         <p className="text-foreground/70 text-center mb-12 max-w-2xl mx-auto">
-        Certifications professionnelles et réalisations qui valident mon expertise 📜
+          Certifications professionnelles et réalisations qui valident mon expertise 📜
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {certifications.map((cert, index) => (
+          {displayedCertifications.map((cert, index) => (
             <a
               key={index}
               href={cert.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-card rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-105 cursor-pointer"
+              className="block bg-card rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all hover:scale-105 cursor-pointer h-[400px] flex flex-col"
             >
-              <div className="h-32 bg-background/50 relative">
+              <div className="h-[70%] bg-background/50 relative">
                 <img
                   src={cert.image}
                   alt={cert.name}
-                  className="w-full h-full object-cover opacity-80"
+                  className="w-full h-full object-contain p-4"
                 />
                 <div className="absolute top-4 right-4 bg-card p-2 rounded-full shadow-md">
-                  <Award className="w-6 h-6 text-primary-400" />
+                  <Award className="w-6 h-6 text-[#FFD93D]" />
                 </div>
               </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-card-foreground mb-2">
+              <div className="p-6 h-[30%] flex flex-col justify-between">
+                <h3 className="text-lg font-semibold text-card-foreground line-clamp-2">
                   {cert.name}
                 </h3>
-                <p className="text-card-foreground/80 mb-2">{cert.issuer}</p>
-                <p className="text-sm text-card-foreground/60">{cert.date}</p>
+                <div>
+                  <p className="text-card-foreground/80 text-sm">{cert.issuer}</p>
+                  <p className="text-sm text-card-foreground/60">{cert.date}</p>
+                </div>
               </div>
             </a>
           ))}
+        </div>
+
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="group flex items-center gap-2 px-6 py-3 rounded-full bg-primary-400/10 hover:bg-primary-400/20 text-primary-400 font-medium transition-all duration-300"
+          >
+            {showAll ? (
+              <>
+                Show Less <ChevronUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
+              </>
+            ) : (
+              <>
+                Show More <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+              </>
+            )}
+          </button>
         </div>
       </div>
     </section>

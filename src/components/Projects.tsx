@@ -20,15 +20,29 @@ const Projects = () => {
       demo: 'https://github.com/DjarallahBrahim?tab=repositories&q=jobOffer&type=&language=&sort=',
       image: './JobStream.png',
     },
+    {
+      title: 'Portfolio : Ma Vitrine Créative et Professionnelle',
+      description:
+        "Un portfolio moderne conçu pour présenter mes compétences techniques et mes projets professionnels.",
+      tech: [
+        'React',
+        'ChatGpt',
+        'Bolt.new',
+        'Github',
+      ],
+      github: 'https://github.com/DjarallahBrahim/portfolio-2',
+      demo: 'https://github.com/DjarallahBrahim/portfolio-2',
+      image: './portfolio.jpeg',
+    },
   ];
 
   return (
-    <section id="projects" className="py-10">
+    <section id="projects" className="py-5">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-4xl font-bold text-center mb-6 bg-gradient-to-r from-primary-600 to-primary-400 text-transparent bg-clip-text">
+        <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">
           Projets Personnels
         </h2>
-        <p className="text-gray-600 text-center mb-10 max-w-xl mx-auto">
+        <p className="text-gray-200 text-center mb-10 max-w-xl mx-auto">
           Découvrez mes projets personnels et mes contributions à la communauté
           des développeurs 🚀
         </p>
