@@ -9,9 +9,9 @@ const Bio = () => {
           <img
             src="./profile-pic.png"
             alt="Profile"
-            className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-primary-200 flex-shrink-0"
+            className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-primary-200 flex-shrink-0 fade-in"
           />
-          <div className="flex flex-col items-start text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-2 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text">
               Brahim djarallah
             </h1>

@@ -104,17 +104,17 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4 font-semibold bg-clip-text">
+        <h2 className="text-4xl font-bold text-center mb-4 font-semibold bg-clip-text bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text fade-in">
         Expériences professionnelles
         </h2>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto fade-in">
           My journey in the tech industry and the impactful projects I've worked
           on
         </p>
 
         <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-8 pb-12 last:pb-0">
+            <div key={index} className="relative pl-8 pb-12 last:pb-0 fade-in">
               {/* Timeline line */}
               <div className="absolute left-0 top-0 bottom-0 w-px bg-primary-200" />
 
