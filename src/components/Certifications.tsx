@@ -61,8 +61,7 @@ const Certifications = () => {
           Certifications & Badges
         </h2>
         <p className="text-foreground/70 text-center mb-12 max-w-2xl mx-auto">
-          Professional certifications and achievements that validate my
-          expertise
+        Certifications professionnelles et réalisations qui valident mon expertise 📜
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">

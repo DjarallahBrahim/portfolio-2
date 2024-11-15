@@ -108,8 +108,7 @@ const Experience = () => {
         Expériences professionnelles
         </h2>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto fade-in">
-          My journey in the tech industry and the impactful projects I've worked
-          on
+        Mon parcours dans l'IT et les projets innovants auxquels j'ai contribué ✨
         </p>
 
         <div className="max-w-4xl mx-auto pb-5">
