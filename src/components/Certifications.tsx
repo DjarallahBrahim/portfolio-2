@@ -13,6 +13,13 @@ const Certifications = () => {
       image: './ckad.png',
     },
     {
+      name: 'Ansible for the Absolute Beginner - Hands-On - DevOps',
+      issuer: 'Udemy',
+      date: '2024',
+      url: 'Ansible for the Absolute Beginner - Hands-On - DevOps',
+      image: './ansible-1.jpg',
+    },
+    {
       name: 'Preparing for Your Associate Cloud Engineer Journey',
       issuer: 'Google cloudskillsboost',
       date: '2024',
