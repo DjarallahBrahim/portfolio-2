@@ -5,6 +5,7 @@ import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Certifications from './components/Certifications';
 import Projects from './components/Projects';
+import { ChatWidget } from './components/ChatWidget';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Certifications />
         <Projects />
       </main>
+      <ChatWidget />
     </div>
   );
 }
