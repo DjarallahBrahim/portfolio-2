@@ -18,10 +18,10 @@ const Projects = () => {
       ],
       github: 'https://github.com/DjarallahBrahim?tab=repositories&q=jobOffer&type=&language=&sort=',
       demo: 'https://github.com/DjarallahBrahim?tab=repositories&q=jobOffer&type=&language=&sort=',
-      image: './JobStream.png',
+      image: './jbstream.png',
     },
     {
-      title: 'Portfolio : Ma Vitrine Créative et Professionnelle',
+      title: 'Portfol-IA : Ma IA Vitrine Professionnelle',
       description:
         "Un portfolio moderne conçu pour présenter mes compétences techniques et mes projets professionnels.",
       tech: [
@@ -29,10 +29,11 @@ const Projects = () => {
         'ChatGpt',
         'Bolt.new',
         'Github',
+        'OpenAi'
       ],
       github: 'https://github.com/DjarallahBrahim/portfolio-2',
       demo: 'https://github.com/DjarallahBrahim/portfolio-2',
-      image: './portfolio.jpeg',
+      image: './porrtia.png',
     },
   ];
 
