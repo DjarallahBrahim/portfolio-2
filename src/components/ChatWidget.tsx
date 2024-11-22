@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, Send, X, Bot, User } from 'lucide-react';
 import { ChatMessage } from '../types';
 import { sendMessage } from '../services/api';
+import ReactMarkdown from 'react-markdown';
 
 export const ChatWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,7 +68,7 @@ export const ChatWidget: React.FC = () => {
           <div className="bg-card p-4 flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <Bot className="w-6 h-6 text-white" />
-              <h3 className="text-l font-bold bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">Assistant de Brahim</h3>
+              <h3 className="text-l font-bold font-mono bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">Assistant de Brahim</h3>
             </div>
             <button
               onClick={() => setIsOpen(false)}
@@ -111,7 +112,7 @@ export const ChatWidget: React.FC = () => {
                         : 'bg-gray-100 text-gray-800'
                     }`}
                   >
-                    {message.content}
+                    <ReactMarkdown className="text-sm font-mono">{message.content}</ReactMarkdown>
                   </div>
                 </div>
               </div>
