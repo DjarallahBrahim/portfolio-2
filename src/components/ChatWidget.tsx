@@ -9,7 +9,7 @@ export const ChatWidget: React.FC = () => {
     {
       role: 'assistant',
       content:
-        "Bonjour! Je suis l'assistant virtuel d'Ibrahim. Je peux vous renseigner sur son parcours, ses compétences en DevOps et backend, ainsi que ses projets. Comment puis-je vous aider?",
+        "Bonjour! Je suis l'assistant virtuel de Brahim. Je peux vous renseigner sur son parcours, ses compétences en DevOps et backend, ainsi que ses projets. Comment puis-je vous aider?",
     },
   ]);
   const [input, setInput] = useState('');
@@ -67,7 +67,7 @@ export const ChatWidget: React.FC = () => {
           <div className="bg-card p-4 flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <Bot className="w-6 h-6 text-white" />
-              <h3 className="text-l font-bold bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">Assistant d'Ibrahim</h3>
+              <h3 className="text-l font-bold bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">Assistant de Brahim</h3>
             </div>
             <button
               onClick={() => setIsOpen(false)}
@@ -167,7 +167,7 @@ export const ChatWidget: React.FC = () => {
         >
           <div className="flex items-center space-x-2">
             <MessageCircle className="w-6 h-6" />
-            <span>Ask IA about Ibrahim!</span>
+            <span>Ask IA about Brahim!</span>
           </div>
         </button>
       )}
