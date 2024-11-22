@@ -168,7 +168,7 @@ export const ChatWidget: React.FC = () => {
         >
           <div className="flex items-center space-x-2">
             <MessageCircle className="w-6 h-6" />
-            <span>Ask IA about Brahim!</span>
+            <span>Explorez Brahim ici!</span>
           </div>
         </button>
       )}
