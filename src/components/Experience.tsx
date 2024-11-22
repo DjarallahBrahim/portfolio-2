@@ -3,10 +3,53 @@ import { Briefcase } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
+   
+    {
+      company: 'Worldline - Contact - BNL',
+      position: 'Ingénieur DevOps',
+      period: '08/2024 - 11/2024',
+      description:
+        "Dans le cadre de l'optimisation des workflows de déploiement et de la migration de l'application Contact Legacy, j'ai contribué à améliorer les pipelines CI/CD et les processus de conteneurisation, tout en pilotant la migration vers un environnement OpenShift. Voici un aperçu de mes missions principales :",
+      achievements: [
+        "Déploiement et gestion de machines virtuelles à l'aide de Terraform pour la gestion de ressources et instances, playbooks Ansible pour appliquer des configurations sur ces instances",
+        "Création et maintenance de rôles Ansible pour l'installation et la configuration de services sur des machines virtuelles",
+        "Suivi et résolution des problèmes d'infrastructure Openshift/VM en utilisant des outils de monitoring Prometheus + Grafana",
+        'Optimisation et amélioration des pipelines GitLab Cl , dockerfile ',
+        'Amélioration des processus de Dockerisation des services personnalisés ( dockerFile/ gitlabci)',
+        "Pilotage de la migration de l'ancienne version de Contact Legacy vers un environnement OpenShift (Docker, Helm, terraform, Ansible, Gitlab ci ).",
+      ],
+      technologies: ['Terraform', 'Ansible', 'Docker', 'Helm', 'Gitlab CI', 'Prometheus', 'Grafana'],
+    },
+    {
+      company: 'Worldline - Contact - LCL',
+      position: 'Full Stack Developer',
+      period: '01/2024 - 08/2024',
+      description:
+        "Dans le cadre du projet de déploiement de la solution Contact-LCL, j'ai participé à la gestion de l'équipe pour assurer la qualité des livrables tout en développant des services personnalisés et en déployant la solution sur OpenShift. Voici un aperçu de mes missions principales :",
+      achievements: [
+        'Participation au pilotage de l’équipe pour garantir la qualité des livrables : organisation des sprints, création de tâches sur JIRA, revue de code et revue technique',
+        'Déploiement de la solution Contact-LCL sur OpenShift',
+        'Conception, développement et livraison de services personnalisés pour le client, utilisant Spring Boot, Angular, Maven, Kafka, Node.js, Docker, et Helm',
+        'Implémentation d’un service de reconnaissance vocale avec Nuance, développé en Spring Boot, Maven, et Docker, déployé et conforme aux exigences spécifiques du client',
+        'Gestion des montées de version mineures et majeures de la solution Contact-LCL',
+        'Développer des interfaces front end en Angular/TypeScript , incluant notamment une interface utilisateur pour un service qui contrôle les flux, les numéros associés aux contacts, ainsi que la disponibilité des agents et des agences.',
+      ],
+      technologies: [
+        'Springboot',
+        'Java',
+        'Kafka',
+        'Angular',
+        'Docker',
+        'Helm',
+        'Kubernetes',
+        'Openshift',
+        'Mysql & PostgreSql',
+      ],
+    },
     {
       company: 'Worldline - Contact - BNP BGL',
       position: 'Ingénieur DevOps & Backend',
-      period: '01/2022 - Present',
+      period: '02/2022 - Present',
       description:
         "Dans le cadre du projet de développement de la solution Contact-BGL, j'ai contribué à la mise en place d'une architecture robuste et évolutive sur OpenShift, tout en automatisant les déploiements et en développant des microservices. Voici un aperçu de mes missions principales :",
 
@@ -22,48 +65,6 @@ const Experience = () => {
         'Coordination avec les équipes techniques du client pour assurer la communication et la résolution des problèmes',
         'Formation des stagiaires et alternants, et organisation d’ateliers de formation pour le client BGL sur la solution Contact',
         'Supervision d’équipe : animation des sprints, daily meetings, et suivi des tâches',
-      ],
-      technologies: [
-        'Springboot',
-        'Java',
-        'Kafka',
-        'Angular',
-        'Docker',
-        'Helm',
-        'Kubernetes',
-        'Openshift',
-        'Mysql & PostgreSql',
-      ],
-    },
-    {
-      company: 'Worldline - Contact - BNL',
-      position: 'Ingénieur DevOps',
-      period: '08/2024 - 11/2024',
-      description:
-        "Dans le cadre de l'optimisation des workflows de déploiement et de la migration de l'application Contact Legacy, j'ai contribué à améliorer les pipelines CI/CD et les processus de conteneurisation, tout en pilotant la migration vers un environnement OpenShift. Voici un aperçu de mes missions principales :",
-      achievements: [
-        "Déploiement et gestion de machines virtuelles à l'aide de Terraform pour la gestion de ressources et instances, playbooks Ansible pour appliquer des configurations sur ces instances",
-        "Création et maintenance de rôles Ansible pour l'installation et la configuration de services sur des machines virtuelles",
-        "Suivi et résolution des problèmes d'infrastructure Openshift/VM en utilisant des outils de monitoring Prometheus + Grafana",
-        'Optimisation et amélioration des pipelines GitLab Cl , dockerfile ',
-        'Amélioration des processus de Dockerisation des services personnalisés ( dockerFile/ gitlabci)',
-        "Pilotage de la migration de l'ancienne version de Contact Legacy vers un environnement OpenShift (Docker, Helm, terraform, Ansible, Gitlab ci ).",
-      ],
-      technologies: ['React', 'TypeScript', 'SASS', 'Redux'],
-    },
-    {
-      company: 'Worldline - Contact - LCL',
-      position: 'Full Stack Developer',
-      period: '01/2024 - 08/2024',
-      description:
-        "Dans le cadre du projet de déploiement de la solution Contact-LCL, j'ai participé à la gestion de l'équipe pour assurer la qualité des livrables tout en développant des services personnalisés et en déployant la solution sur OpenShift. Voici un aperçu de mes missions principales :",
-      achievements: [
-        'Participation au pilotage de l’équipe pour garantir la qualité des livrables : organisation des sprints, création de tâches sur JIRA, revue de code et revue technique',
-        'Déploiement de la solution Contact-LCL sur OpenShift',
-        'Conception, développement et livraison de services personnalisés pour le client, utilisant Spring Boot, Angular, Maven, Kafka, Node.js, Docker, et Helm',
-        'Implémentation d’un service de reconnaissance vocale avec Nuance, développé en Spring Boot, Maven, et Docker, déployé et conforme aux exigences spécifiques du client',
-        'Gestion des montées de version mineures et majeures de la solution Contact-LCL',
-        'Développer des interfaces front end en Angular/TypeScript , incluant notamment une interface utilisateur pour un service qui contrôle les flux, les numéros associés aux contacts, ainsi que la disponibilité des agents et des agences.',
       ],
       technologies: [
         'Springboot',

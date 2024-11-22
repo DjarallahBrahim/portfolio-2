@@ -15,6 +15,7 @@ const Projects = () => {
         'GCP',
         'Github Action',
         'Kubernetes',
+        'Terraform',
       ],
       github: 'https://github.com/DjarallahBrahim?tab=repositories&q=jobOffer&type=&language=&sort=',
       demo: 'https://github.com/DjarallahBrahim?tab=repositories&q=jobOffer&type=&language=&sort=',
