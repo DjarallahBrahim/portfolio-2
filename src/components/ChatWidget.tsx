@@ -164,7 +164,7 @@ export const ChatWidget: React.FC = () => {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-indigo-600 text-white rounded-full p-4 shadow-lg hover:bg-indigo-700 transition-transform hover:scale-110 animate-pulse"
+          className="bg-indigo-600 text-white rounded-full p-4 shadow-lg hover:bg-indigo-700 transition-transform hover:scale-110"
         >
           <div className="flex items-center space-x-2">
             <MessageCircle className="w-6 h-6" />
