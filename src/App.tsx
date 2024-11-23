@@ -9,7 +9,7 @@ import { ChatWidget } from './components/ChatWidget';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Header />
       <main>
         <Bio />

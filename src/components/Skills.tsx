@@ -35,10 +35,10 @@ const Skills = () => {
   return (
     <section className="py-0">
       <div className="container mx-auto px-4 fade-in">
-        <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">
+        <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-600 to-primary-400 text-transparent bg-clip-text leading-relaxed py-1">
           Skills & Technologies
         </h2>
-        <p className="text-foreground/70 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-[var(--foreground)] opacity-70 text-center mb-12 max-w-2xl mx-auto">
           Technologies et outils que j'utilise au quotidien 🛠️
         </p>
 
@@ -46,13 +46,13 @@ const Skills = () => {
           {Object.entries(skillCategories).map(([category, skills]) => (
             <div 
               key={category} 
-              className="bg-card p-6 rounded-xl border border-primary-400/10 hover:border-primary-400/20 transition-all duration-300 hover:shadow-lg group"
+              className="bg-[var(--card)] p-6 rounded-xl border border-primary-400/10 hover:border-primary-400/20 transition-all duration-300 hover:shadow-lg group"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-2 rounded-lg bg-primary-400/10 text-primary-400 group-hover:scale-110 transition-transform duration-300">
+                <div className="p-2 rounded-lg bg-primary-600/10 text-primary-600 group-hover:scale-110 transition-transform duration-300">
                   {categoryIcons[category as keyof typeof categoryIcons]}
                 </div>
-                <h3 className="text-xl font-semibold text-card-foreground">
+                <h3 className="text-xl font-semibold text-[var(--card-foreground)]">
                   {category}
                 </h3>
               </div>
@@ -63,8 +63,8 @@ const Skills = () => {
                     key={skill}
                     className="flex items-center gap-2 group/skill"
                   >
-                    <div className="h-2 w-2 rounded-full bg-primary-400/50 group-hover/skill:bg-primary-400 transition-colors duration-300" />
-                    <span className="text-foreground/70 group-hover/skill:text-foreground transition-colors duration-300">
+                    <div className="h-2 w-2 rounded-full bg-primary-600/50 group-hover/skill:bg-primary-600 transition-colors duration-300" />
+                    <span className="text-[var(--card-foreground)] opacity-80 group-hover/skill:opacity-100 transition-colors duration-300">
                       {skill}
                     </span>
                   </div>

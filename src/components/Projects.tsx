@@ -44,7 +44,7 @@ const Projects = () => {
         <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1">
           Projets Personnels
         </h2>
-        <p className="text-gray-200 text-center mb-10 max-w-xl mx-auto">
+        <p className="text-[var(--card-foreground)] opacity-80 text-center mb-10 max-w-xl mx-auto">
           Découvrez mes projets personnels et mes contributions à la communauté
           des développeurs 🚀
         </p>

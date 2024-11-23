@@ -108,7 +108,7 @@ const Experience = () => {
         <h2 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-primary-200 text-transparent bg-clip-text leading-relaxed py-1 fade-in">
         Expériences professionnelles
         </h2>
-        <p className="text-gray-200 text-center mb-12 max-w-2xl mx-auto fade-in">
+        <p className="text-[var(--card-foreground)] opacity-80 text-center mb-12 max-w-2xl mx-auto fade-in">
         Mon parcours dans l'IT et les projets innovants auxquels j'ai contribué ✨
         </p>
 
@@ -123,22 +123,22 @@ const Experience = () => {
 
               <div className="bg-card  rounded-xl shadow-lg p-6 ml-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <Briefcase className="w-5 h-5 text-primary-200" />
-                  <h3 className="text-xl font-semibold text-gray-100">
+                  <Briefcase className="w-5 h-5 text-primary-600" />
+                  <h3 className="text-xl font-semibold text-[var(--card-foreground)] opacity-80">
                     {exp.position}
                   </h3>
                 </div>
 
                 <div className="mb-4">
-                  <p className="text-primary-250 font-medium">{exp.company}</p>
-                  <p className="text-gray-200 text-sm">{exp.period}</p>
+                  <p className="text-[var(--card-foreground)] opacity-80 font-medium">{exp.company}</p>
+                  <p className="text-[var(--card-foreground)] opacity-80 text-sm">{exp.period}</p>
                 </div>
 
-                <p className="text-gray-300 mb-4">{exp.description}</p>
+                <p className="text-[var(--card-foreground)] opacity-80 mb-4">{exp.description}</p>
 
                 <div className="space-y-3">
                   {exp.achievements.map((achievement, aidx) => (
-                    <p key={aidx} className="text-gray-100 mb-4">
+                    <p key={aidx} className="text-[var(--card-foreground)] opacity-80 mb-4">
                       <span className="mr-3 text-blue-600 text-lg">•</span>
                       {achievement}
                     </p>

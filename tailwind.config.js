@@ -4,10 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'hsl(234 84% 7%)',
-        foreground: 'hsl(206 69% 90%)',
-        card: 'hsl(233 60% 17%)',
-        'card-foreground': 'hsl(0 0% 98%)',
+        background: {
+          DEFAULT: 'var(--background)',
+          light: 'var(--background-light)'
+        },
+        foreground: {
+          DEFAULT: 'var(--foreground)',
+          light: 'var(--foreground-light)'
+        },
+        card: {
+          DEFAULT: 'var(--card)',
+          light: 'var(--card-light)'
+        },
+        'card-foreground': {
+          DEFAULT: 'var(--card-foreground)',
+          light: 'var(--card-foreground-light)'
+        },
         primary: {
           50: '#f3f1ff',
           100: '#ebe5ff',
